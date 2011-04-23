@@ -17,10 +17,25 @@ How to use this module
 To use the **Kohana CLI Reloaded** Model, just:
 
 1. Download and extract the code from [Github](https://sebicas@github.com/sebicas/kohana-cli-reloaded.git).
-2. Place the module into your Kohana instances modules folder.
-3. Enable the module within the application bootstrap within the section entitled `modules`.
+2. Configure Paths in ./kohana file
+3. Give executing permissions to ./kohana file ( chmod +x ./kohana )
+3. Place the module into your Kohana instances modules folder.
+4. Enable the module within the application bootstrap within the section entitled `modules`.
 
-Go to `application/bootstrap.php`, look for `Kohana::modules()` and add:
+Optionally: You could add your ./kohana file to your adding it to your .bashrc
+
+    # Add Kohana CLI Reloaded
+    export PATH=/home/redremax/modules/kohana-cli-reloaded/:$PATH
+
+Configure Paths:
+
+    // Define Application & System Paths
+    define('INDEX', '../../public_html/index.php');
+    define('PHP_BIN', '/usr/bin/php');
+
+Define your paths to your index.php file and executable php.
+
+Then go to `application/bootstrap.php`, look for `Kohana::modules()` and add:
 
     'kohana-cli-reloaded' => MODPATH.'kohana-cli-reloaded', // Kohana CLI Reloaded
 
@@ -45,7 +60,7 @@ To see a **Demo** of the Module working go to the Module directory and type:
 
     ./kohana cli_demo
 
-**Important**: Make sure./kohana file has executing permitions ( chmod +x ./kohana )
+**Important**: Make sure ./kohana file has executing permissions ( chmod +x ./kohana )
 
 Contributing
 ------------
