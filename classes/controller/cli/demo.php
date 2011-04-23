@@ -1,15 +1,18 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Kohana CLI Reloaded
+ * Kohana CLI Reloaded Demo
  *
  * @package    CLI
  * @category   Controllers
- * @author     Sebicas
+ * @author     sebicas
  */
 class Controller_Cli_Demo extends Controller {
 
     function action_index()
     {
+        // Ckeck if is CLI
+        CLI::check();
+
         // Clear Screen to Start
         CLI::clear_screen();
 
@@ -18,7 +21,7 @@ class Controller_Cli_Demo extends Controller {
 
         // White in Yellow
         CLI::write(' Kohana CLI Reloaded v0.1 beta by @sebicas'.PHP_EOL, 'yellow');
-        CLI::write(' Mostly ported from FuelPHP Framework under MIT License'.PHP_EOL);
+        CLI::write(' Mostly ported from FuelPHP Framework & Minion under MIT License'.PHP_EOL);
         CLI::write(' https://github.com/sebicas/kohana-cli-reloaded'.PHP_EOL);
 
         // Line Breaks
@@ -41,4 +44,4 @@ class Controller_Cli_Demo extends Controller {
         CLI::new_line();
     }
 
-}
+} // End Controller_Cli_Demo
