@@ -123,7 +123,7 @@ class CLI_Reloaded extends Kohana_CLI {
             $options_output = '';
             if (!empty($options))
             {
-                $options_output = ' [ '.implode(', ', $options).' ]';
+                $options_output = ' ( '.implode(' / ', $options).' )';
             }
 
             fwrite(STDOUT, $output.$options_output.': ');
