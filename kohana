@@ -2,11 +2,15 @@
 <?php
 
 /*
+ * Kohana - CLI Reloaded v0.1 beta by @sebicas
+ * Adapted from Minion CLI framework for Kohana
+ * https://github.com/kohana-minion
+ *
  * Usage: ./kohana <controler>(/<action>(/<id>)) [--option1=optval1 --option2=optval2]
  * Example: ./kohana sebicas/view --username=john --password=secret --name="John Doe"
  */
 
-// Define Paths
+// Define Application & System Paths
 define('INDEX', '../../public_html/index.php');
 define('PHP_BIN', '/usr/bin/php');
 
@@ -15,20 +19,21 @@ $args = count($argv) - 1;
 
 if($args < 1)
 {
-    echo "\nKohana - CLI Reloaded v0.1 beta";
+    echo "\nKohana - CLI Reloaded v0.1 beta by @sebicas";
     echo "\nhttps://github.com/sebicas/kohana-cli-reloaded";
     echo "\n\nError: Please set URI\nExample: $ kohana <controler>(/<action>(/<id>)) [--option1=optval1 --option2=optval2]\n\n";
 }
  else
 {
-    // Set Command
+    // Set Command to Execute
     $cmd = PHP_BIN.' '.INDEX.' --uri=';
 
+    // Adding Arguments
     for ($i = 1; $i <= $args; $i++)
     {
         $cmd .= $argv[$i].' ';
     }
 
-    // Execute Kohana
+    // Executing Kohana
     passthru($cmd);
 }
