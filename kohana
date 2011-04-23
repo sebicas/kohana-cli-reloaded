@@ -28,7 +28,7 @@ if($args < 1)
     {
         $cmd .= $argv[$i].' ';
     }
-}
 
-// Execute Kohana
-passthru($cmd);
+    // Execute Kohana
+    passthru($cmd);
+}
