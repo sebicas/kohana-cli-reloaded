@@ -22,7 +22,7 @@ To use the **Kohana CLI Reloaded** Model, just:
 3. Place the module into your Kohana instances modules folder.
 4. Enable the module within the application bootstrap within the section entitled `modules`.
 
-Optionally: You could add your ./kohana file to your adding it to your .bashrc
+Optionally: You could add your ./kohana file to your PATH adding it to your .bashrc
 
     # Add Kohana CLI Reloaded
     export PATH=/home/redremax/modules/kohana-cli-reloaded/:$PATH
