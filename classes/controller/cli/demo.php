@@ -17,16 +17,27 @@ class Controller_Cli_Demo extends Controller {
         CLI::new_line();
 
         // White in Yellow
-        CLI::write(' Kohana CLI Reloaded by @sebicas'.PHP_EOL, 'yellow');
-        CLI::write('  '.PHP_EOL);
+        CLI::write(' Kohana CLI Reloaded v0.1 beta by @sebicas'.PHP_EOL, 'yellow');
+        CLI::write(' Mostly ported from FuelPHP Framework under MIT License'.PHP_EOL);
+        CLI::write(' https://github.com/sebicas/kohana-cli-reloaded'.PHP_EOL);
 
-        // 2 Line Breaks
+        // Line Breaks
         CLI::new_line();
 
-        // Regular White
-        CLI::write(' Mostly ported from FuelPHP Framework'.PHP_EOL);
+        // Ask a question
+        $ready = CLI::read(' Are you ready for a demo?', array('y','n'));
 
-        // 2 Line Breaks
+        if($ready == 'n')
+        {
+            // User said no
+            CLI::new_line();
+            CLI::write(' Ok.. come back latter'.PHP_EOL);
+            CLI::new_line();
+
+            exit;
+        }
+
+        // Line Breaks
         CLI::new_line();
     }
 
