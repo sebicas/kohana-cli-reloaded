@@ -11,7 +11,7 @@
  */
 
 // Define Application & System Paths
-define('INDEX', '../../public_html/index.php');
+define('INDEX', '../../index.php');
 define('PHP_BIN', '/usr/bin/php');
 
 // Count Arguments
