@@ -1,12 +1,7 @@
 Kohana CLI Reloaded
 ===================
 
-The CLI Reloaded Class provides extended Command Line functionalities to Kohana 3
-
-Available Methods
------------------
-
-Kohana CLI Reloaded extends default Kohana CLI functionalities with the static methods:
+Kohana CLI Reloaded Module provides extended Command Line functionalities to the default Kohana CLI Class, the following the static methods are included:
 
     CLI::read()
     CLI::write()
