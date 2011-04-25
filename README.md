@@ -3,6 +3,22 @@ Kohana CLI Reloaded
 
 The CLI Reloaded Class provides extended Command Line functionalities to Kohana 3
 
+Available Methods
+-----------------
+
+Kohana CLI Reloaded extends default Kohana CLI functionalities with the static methods:
+
+    CLI::read()
+    CLI::write()
+    CLI::password()
+    CLI::wait()
+    CLI::color()
+    CLI::error()
+    CLI::beep()
+    CLI::new_line()
+    CLI::clear_screen()
+    CLI::check()
+
 Mostly of the code has been extracted and adapted from:
 
 **Fuel PHP Framework**
