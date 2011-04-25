@@ -11,7 +11,7 @@
  */
 
 // Define Application & System Paths
-define('INDEX', '../../index.php');
+define('INDEX', '/home/myuser/kohana/index.php'); // Use Full Path if Possible
 define('PHP_BIN', '/usr/bin/php');
 
 // Count Arguments
