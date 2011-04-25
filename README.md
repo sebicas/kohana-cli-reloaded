@@ -30,7 +30,7 @@ Optionally: You could add your ./kohana file to your PATH adding it to your .bas
 Configure Paths:
 
     // Define Application & System Paths
-    define('INDEX', '/home/myuser/kohana/index.php');
+    define('INDEX', '/home/myuser/kohana/index.php'); // Use Full Path if Possible
     define('PHP_BIN', '/usr/bin/php');
 
 Define your paths to your index.php file and executable php.
