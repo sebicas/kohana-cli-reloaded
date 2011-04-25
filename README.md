@@ -16,13 +16,10 @@ The following the static methods are included:
     CLI::clear_screen()
     CLI::check()
 
-Mostly of the code has been extracted and adapted from:
+Most of the code has been extracted and adapted from:
 
-**Fuel PHP Framework**
-http://fuelphp.com
-
-**Minion CLI framework for Kohana**
-https://github.com/kohana-minion/core
+* [Fuel PHP Framework](http://fuelphp.com)
+* [Minion CLI Framework for Kohana](https://github.com/kohana-minion/core)
 
 How to use this module
 ----------------------
