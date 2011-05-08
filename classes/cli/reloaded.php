@@ -18,6 +18,10 @@
  */
 class CLI_Reloaded extends Kohana_CLI {
 
+    // Replace for your Executable
+    const executable = 'kohana ';
+
+    // User Message
     public static $wait_msg = 'Press any key to continue...';
 
     protected static $foreground_colors = array
@@ -63,6 +67,30 @@ class CLI_Reloaded extends Kohana_CLI {
         {
             throw new Kohana_Exception("Kohana CLI can only be ran from the command line");
         }
+    }
+
+    /**
+     * Run Indicated Controller in the Command Line
+     *
+     * @author sebicas
+     */
+    static public function run($controller, array $arguments = NULL)
+    {
+        // Set Command to Execute
+        $cmd = CLI::executable.' '.$controller;
+
+        // Adding Arguments;
+        if(!is_null($arguments) AND is_array($arguments))
+        {
+            // Adding Arguments
+            foreach($arguments as $name => $value)
+            {
+                $cmd .= ' --'.$name.'='.$value;
+            }
+        }
+
+        // Executing Kohana
+        passthru($cmd);
     }
 
     /**

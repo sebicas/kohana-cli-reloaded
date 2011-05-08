@@ -5,6 +5,7 @@ Kohana CLI Reloaded Module provides extended Command Line functionalities to the
 
 The following the static methods are included:
 
+    CLI::run()
     CLI::read()
     CLI::write()
     CLI::password()
