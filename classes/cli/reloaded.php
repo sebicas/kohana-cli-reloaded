@@ -65,7 +65,12 @@ class CLI_Reloaded extends Kohana_CLI {
     {
         if ( ! Kohana::$is_cli)
         {
-            throw new Kohana_Exception("Kohana CLI can only be ran from the command line");
+            // Show Error Message
+            echo "<B>Fatal Error:</B> ";
+            echo "Kohana CLI can only be ran from the command line ... Sorry :)";
+
+            // Break Execution
+            exit;
         }
     }
 
@@ -111,7 +116,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
      * @link       http://fuelphp.com
-     * 
+     *
      * @return string the user input
      */
     public static function read()
@@ -216,7 +221,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
      * @link       http://fuelphp.com
-     * 
+     *
      * @param string|array $text the text to output, or array of lines
      */
     public static function write($text = '', $foreground = NULL, $background = NULL)
@@ -242,7 +247,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
      * @link       http://fuelphp.com
-     * 
+     *
      * @param int $seconds number of seconds
      * @param bool $countdown show a countdown or not
      */
@@ -258,11 +263,11 @@ class CLI_Reloaded extends Kohana_CLI {
                 self::write($time.' ... ');
 
                 sleep(1);
-                
+
                 $time--;
             }
 
-            
+
         }
         else
         {
@@ -290,7 +295,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @param string $text the text to color
      * @param atring $foreground the foreground color
      * @param string $background the background color
-     * 
+     *
      * @return string the color coded string
      */
     public static function color($text, $foreground, $background = NULL)
@@ -329,7 +334,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
      * @link       http://fuelphp.com
-     * 
+     *
      * @param	string|array	$text	the text to output, or array of errors
      */
     public static function error($text = '', $foreground = 'light_red', $background = NULL)
@@ -354,7 +359,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
      * @link       http://fuelphp.com
-     * 
+     *
      * @param	int $num	the number of times to beep
      */
     public static function beep($num = 1)
@@ -368,7 +373,7 @@ class CLI_Reloaded extends Kohana_CLI {
      * @author     Fuel Development Team
      * @license    MIT License
      * @copyright  2010 - 2011 Fuel Development Team
-     * 
+     *
      * @param	integer	Number of lines to output
      * @return	void
      */
